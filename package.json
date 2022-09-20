@@ -1,0 +1,30 @@
+{
+  "name": "natify",
+  "version": "0.0.1",
+  "description": "Natify extends the native constraint validation api with useful functions and validations",
+  "main": "dist/natify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode development -c webpack.config.js",
+    "build": "webpack --mode production -c webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denizbinay/natify.git"
+  },
+  "keywords": [
+    "validation",
+    "formvalidation",
+    "contraint-validation-api"
+  ],
+  "author": "denizbinay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/denizbinay/natify/issues"
+  },
+  "homepage": "https://github.com/denizbinay/natify#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

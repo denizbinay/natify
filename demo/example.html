@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Natify Example</title>
+</head>
+
+<body>
+    <!-- prettier-ignore-start -->
+    <form id="natifyForm">
+        <label for="name">Username <span class="microcopy">(Choose your public Username)</span></label>
+
+        <input natify type="text" name="name" placeholder="e.g. alex or robin" minlength="3"
+            minlength-msg="Username must be at least 3 characters long" maxlength="20"
+            maxlength-msg="Username must be at most 20 characters long" required="true"
+            required-msg="Username is required" />
+
+        <label for="email">Email <span class="microcopy">(Your E-Mail Adress. We use this for Login)</span></label>
+        <input natify type="text" name="email" placeholder="e.g. robin@gmail.com" />
+
+        <label for="phone">Phone <span class="microcopy">(We use this for 2FA)</span></label>
+        <input natify type="text" name="phone" placeholder="e.g. 015159355698" />
+
+        <label for="password">Password <span class="microcopy">(Please choose a strong password)</span></label>
+        <input natify type="password" name="password" title="password" />
+
+        <label for="profilimage">Profil Image <span class="microcopy">(Choose your public Profil Picture)</span></label>
+        <input natify type="file" name="profilimage" title="profilimage" />
+
+        <input type="submit" value="Submit">
+    </form>
+    <!-- prettier-ignore-end -->
+    <script src="../dist/natify.js"></script>
+    <script>
+        const form = natify();
+        console.log(form);
+    </script>
+</body>
+
+</html>

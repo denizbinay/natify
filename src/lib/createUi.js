@@ -3,19 +3,26 @@ import deleteMessages from "./ui/deleteMessages";
 
 function createUi(config, form) {
   form.inputs.forEach((input) => {
-    // On invalid show messages
     input.addEventListener("invalid", () => {
+      // On invalid show messages
       showMessages(config, input, form.container);
+      // If input or required the color the border
+      if (input.value.length > 0 || input.required) {
+        input.style.borderColor = config.errorColor;
+      } else {
+        input.style.borderColor = null;
+      }
     });
 
-    // On valid delete messages
     input.addEventListener("valid", () => {
+      // On valid delete messages
       deleteMessages(input, form.container);
-    });
-
-    // On Blur change color of border
-    input.addEventListener("blur", () => {
-      input.style.borderColor = input.checkValidityAll() ? config.successColor : config.errorColor;
+      // If input or required the color the border
+      if (input.value.length > 0 || input.required) {
+        input.style.borderColor = config.successColor;
+      } else {
+        input.style.borderColor = null;
+      }
     });
   });
 }

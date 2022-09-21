@@ -9,7 +9,6 @@ function configDefault(config) {
   if (!config.fontSize) config.fontSize = "15px";
   if (!config.borderWidth) config.borderWidth = "2px";
   if (!config.borderStyle) config.borderStyle = "solid";
-  if (!config.preventDefault) config.preventDefault = true;
   if (!config.formSubmit) config.formSubmit = false;
   if (!config.onSubmit) config.onSubmit = true;
   return config;

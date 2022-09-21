@@ -1,11 +1,9 @@
 import createNatifyInput from "./api/createNatifyInput";
+import createNatifyForm from "./api/createNatifyForm";
 
-function createNatifyForm(config) {
+function createApi(config) {
   const nativForm = document.querySelector(config.selector);
   const nativInputs = nativForm.querySelectorAll("[natify]");
-
-  // Create natify form
-  let natifyForm = nativForm;
 
   // Create natify inputs
   let natifyInputs = [];
@@ -13,10 +11,13 @@ function createNatifyForm(config) {
     natifyInputs.push(createNatifyInput(input));
   });
 
+  // Create natify form
+  let natifyForm = createNatifyForm(config, nativForm);
+
   return {
     container: natifyForm,
     inputs: natifyInputs,
   };
 }
 
-export default createNatifyForm;
+export default createApi;

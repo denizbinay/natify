@@ -1,5 +1,5 @@
 import configDefault from "./lib/configDefault";
-import createNatifyForm from "./lib/createNatifyForm";
+import createApi from "./lib/createApi";
 import createUi from "./lib/createUi";
 
 function natify(config) {
@@ -7,7 +7,7 @@ function natify(config) {
   config = configDefault(config ? config : {});
 
   // Create Natify Form
-  const form = createNatifyForm(config);
+  const form = createApi(config);
 
   // Create natify ui
   if (config.createUi) createUi(config, form);

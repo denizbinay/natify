@@ -1,10 +1,14 @@
-import checkValidityAll from "./checkValidityAll";
+import { checkValidityAllInput } from "./checkValidityAll";
 import setValidationState from "./setValidationState";
-import extractConditions from "./extractConditions";
+import setInitialState from "./setInitialState";
+import addBuildInCustomValidators from "./addBuildInCustomValidators";
 
 function createNatifyInput(input) {
+  // Add Build In Custom Conditions
+  input = addBuildInCustomValidators(input);
+
   // Extract all conditions from html attributes
-  input.validity.state = extractConditions(input);
+  input.validity.state = setInitialState(input);
 
   // Update the validity state on input
   input.addEventListener("input", () => {
@@ -12,7 +16,7 @@ function createNatifyInput(input) {
   });
 
   // Add Function that checks all rules custom and build-in.
-  input.checkValidityAll = checkValidityAll;
+  input.checkValidityAll = checkValidityAllInput;
 
   // Trigger Invalid and valid Event on input
   input.addEventListener("input", (event) => {

@@ -1,4 +1,5 @@
 const path = require("path");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   entry: "./src/natify.js",
@@ -12,4 +13,5 @@ module.exports = {
     libraryExport: "default",
     clean: true,
   },
+  plugins: [new CompressionPlugin()],
 };

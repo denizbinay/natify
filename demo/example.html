@@ -11,25 +11,51 @@
 
 <body>
     <!-- prettier-ignore-start -->
-    <form id="natifyForm">
+    <form id="natifyForm" novalidate>
         <label for="name">Username <span class="microcopy">(Choose your public Username)</span></label>
 
         <input natify type="text" name="name" placeholder="e.g. alex or robin" minlength="3"
             minlength-msg="Username must be at least 3 characters long" maxlength="20"
-            maxlength-msg="Username must be at most 20 characters long" required="true"
+            maxlength-msg="Username must be at most 20 characters long" required="false"
             required-msg="Username is required" />
 
         <label for="email">Email <span class="microcopy">(Your E-Mail Adress. We use this for Login)</span></label>
-        <input natify type="text" name="email" placeholder="e.g. robin@gmail.com" />
+        <input natify type="email" type-msg="Please enter a valid E-Mail Adress" required="true"
+            required-msg="Please provide a Email" name="email" placeholder="e.g. robin@gmail.com" />
 
-        <label for="phone">Phone <span class="microcopy">(We use this for 2FA)</span></label>
-        <input natify type="text" name="phone" placeholder="e.g. 015159355698" />
+        <label for="poweranimal">Power Animal <span class="microcopy">(Choose your Power Animal)</span></label>
+        <select natify name="poweranimal" title="poweranimal" required="true"
+            required-msg="Please choose a Power Animal">
+            <option value="">Choose your Power Animal</option>
+            <option value="bear">Bear</option>
+            <option value="eagle">Eagle</option>
+            <option value="wolf">Wolf</option>
+            <option value="tiger">Tiger</option>
+            <option value="lion">Lion</option>
+            <option value="snake">Snake</option>
+            <option value="dragon">Dragon</option>
+            <option value="unicorn">Unicorn</option>
+        </select>
+
+        <label for="age">Age <span class="microcopy">(We use this for Statistics only)</span></label>
+        <input type="number" name="age" placeholder="e.g. 32" natify required="true"
+            required-msg="Please provide your age" min="18" min-msg="You must be at least 18 years old" max="120"
+            max-msg="You must be at most 120 years old" pattern="[0-9]+" pattern-msg="Please enter a valid age" />
 
         <label for="password">Password <span class="microcopy">(Please choose a strong password)</span></label>
-        <input natify type="password" name="password" title="password" />
+        <input natify type="password" name="password" title="password" pattern='(?=.*\d)(?=.*[a-zA-Z]).+'
+            pattern-msg="Please choose a Password with at least one number and one letter" required="true"
+            required="true" required-msg="Please provide a password" />
 
-        <label for="profilimage">Profil Image <span class="microcopy">(Choose your public Profil Picture)</span></label>
-        <input natify type="file" name="profilimage" title="profilimage" />
+        <label for="biography"> Biography <span class="microcopy">(Tell us about yourself)</span></label>
+        <textarea title="biography" name="biography" natify placeholder="Love Cats - Fuck Nazis" minlength="10"
+            minlength-msg="Biography must be at least 20 charsters long" maxlength="100"
+            maxlength-msg="Biography must be at most 100 characters long"></textarea>
+
+        <label for=" profilimage">Profil Image <span class="microcopy">(Choose your public Profil
+                Picture)</span></label>
+        <input natify type="file" maxsize="5242880" maxsize-msg="File must be at most 5mb" accept="image/*"
+            accept-msg="File must be an image" name="profilimage" title="profilimage" />
 
         <input type="submit" value="Submit">
     </form>

@@ -1,6 +1,6 @@
 {
   "name": "natify",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Natify extends the native constraint validation api with useful functions and validations",
   "main": "dist/natify.js",
   "scripts": {

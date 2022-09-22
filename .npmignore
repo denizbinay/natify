@@ -2,3 +2,4 @@ demo
 node_modules
 src
 webpack.config.js
+dist/natify.js.gz

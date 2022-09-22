@@ -130,7 +130,7 @@ Following Output
     validation: f() // validation function
     // Used only given Validation function if a value is given.
     // Else If the value is required false else true.
-    // Don't fire events for empty non required fields.
+    // Don't fire invalid for empty non required fields.
 },
 1: {
 ...

@@ -11,7 +11,9 @@ function showMessages(config, input, container) {
   conditions.forEach((condition) => {
     const isValid = condition.isValid;
     const element = document.createElement("span");
-    element.style.color = isValid ? config.successColor : config.errorColor;
+    const color = isValid ? config.successColor : config.errorColor;
+    input.style.border = `${color} ${config.borderWidth} ${config.borderStyle}`;
+    element.style.color = color;
     element.style.fontSize = config.fontSize;
     element.textContent = `${isValid ? config.successIcon : config.errorIcon} ${condition.message}`;
     element.setAttribute("msgfor", input.getAttribute("name"));

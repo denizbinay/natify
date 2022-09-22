@@ -1,5 +1,5 @@
 export function checkValidityAllInput() {
-  return this.validity.state.every((condition) => condition.isValid);
+  return this.validity.state.every((condition) => condition.validation());
 }
 
 export function checkValidityAllForm() {

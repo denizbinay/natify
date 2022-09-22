@@ -55,17 +55,17 @@ Write your Conditions and Messages in HTML.
 
 ```js
 const form = natify({
-    selector:"#natifyForm"; // CSS Selector for form container
-    formSubmit:false;// Submit form or prevent default
-    onSubmit:true; // Validate Fields on submit event
-    createUi:true; // Enable build in ui
-    successColor:"#4CAF50"; // Color used for success in build in ui
-    errorColor:"#F44336"; // Color used for error in build in ui
-    successIcon:"✔"; // Icon used for success in build in ui
-    errorIcon:"🞭"; // Icon used for error in build in ui
-    fontSize:"15px"; // Fontsize used for build in ui
-    borderWidth:"2px"; // Borderwidth used for build in ui
-    borderStyle:"solid"; // Bordercolor used for build in ui
+  selector: "#natifyForm", // CSS Selector for form container
+  formSubmit: false, // Submit form or prevent default
+  onSubmit: true, // Validate Fields on submit event
+  createUi: true, // Enable build in ui
+  successColor: "#4CAF50", // Color used for success in build in ui
+  errorColor: "#F44336", // Color used for error in build in ui
+  successIcon: "✔", // Icon used for success in build in ui
+  errorIcon: "🞭", // Icon used for error in build in ui
+  fontSize: "15px", // Fontsize used for build in ui
+  borderWidth: "2px", // Borderwidth used for build in ui
+  borderStyle: "solid", // Bordercolor used for build in ui
 });
 ```
 
@@ -172,4 +172,4 @@ Looking for a lightweight form validation library that also allows frontend warn
 
 ## What is Missing
 
-I would be really happy if someone could help me. It doesn't have to be actively writing code. If someone with more experience could take a look at the code and give me tips for improvements would be a lot of help. Feel free to use the discussion tab in the repo.
+Unfortunately, I am not an experienced library developer. I would be really happy if someone could help me. It doesn't have to be actively writing code. If someone with more experience could take a look at the code and give me tips for improvements would be a lot of help. Feel free to use the discussion tab in the repo.

@@ -59,8 +59,8 @@ const form = natify({
   formSubmit: false, // Submit form or prevent default
   onSubmit: true, // Validate Fields on submit event
   createUi: true, // Enable build in ui
-  successColor: "#4CAF50", // Color used for success in build in ui
-  errorColor: "#F44336", // Color used for error in build in ui
+  successColor: "#bef264", // Color used for success in build in ui
+  errorColor: "#fb923c", // Color used for error in build in ui
   successIcon: "✔", // Icon used for success in build in ui
   errorIcon: "🞭", // Icon used for error in build in ui
   fontSize: "15px", // Fontsize used for build in ui

@@ -8,9 +8,9 @@ function createUi(config, form) {
       showMessages(config, input, form.container);
       // If input or required the color the border
       if (input.value.length > 0 || input.required) {
-        input.style.borderColor = config.errorColor;
+        input.style.border = `${config.errorColor} ${config.borderWidth} ${config.borderStyle}`;
       } else {
-        input.style.borderColor = null;
+        input.style.border = null;
       }
     });
 
@@ -19,9 +19,9 @@ function createUi(config, form) {
       deleteMessages(input, form.container);
       // If input or required the color the border
       if (input.value.length > 0 || input.required) {
-        input.style.borderColor = config.successColor;
+        input.style.border = `${config.successColor} ${config.borderWidth} ${config.borderStyle}`;
       } else {
-        input.style.borderColor = null;
+        input.style.border = null;
       }
     });
   });

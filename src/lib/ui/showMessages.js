@@ -12,7 +12,6 @@ function showMessages(config, input, container) {
     const isValid = condition.isValid;
     const element = document.createElement("span");
     const color = isValid ? config.successColor : config.errorColor;
-    input.style.border = `${color} ${config.borderWidth} ${config.borderStyle}`;
     element.style.color = color;
     element.style.fontSize = config.fontSize;
     element.textContent = `${isValid ? config.successIcon : config.errorIcon} ${condition.message}`;

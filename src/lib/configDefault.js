@@ -2,8 +2,8 @@
 function configDefault(config) {
   if (!config.selector) config.selector = "#natifyForm";
   if (!config.createUi) config.createUi = true;
-  if (!config.successColor) config.successColor = "#4CAF50";
-  if (!config.errorColor) config.errorColor = "#F44336";
+  if (!config.successColor) config.successColor = "#bef264";
+  if (!config.errorColor) config.errorColor = "#fb923c";
   if (!config.successIcon) config.successIcon = "✔";
   if (!config.errorIcon) config.errorIcon = "🞭";
   if (!config.fontSize) config.fontSize = "15px";
